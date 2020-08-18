@@ -9,7 +9,7 @@ class NegociacaoController {
     }
     adiciona(event) {
         event.preventDefault();
-        const negociacao = new Negociacao(new Date(this._inputData.value.replace(/-/g, ',')), parseInt(this._inputQuantidade.value), parseFloat(this._inputValor.value));
+        const negociacao = new Negociacao(new Date(this._inputData.value), parseInt(this._inputQuantidade.value), parseFloat(this._inputValor.value));
         this._negociacoes.adiciona(negociacao);
         this._negociacaoView.update(this._negociacoes);
     }
