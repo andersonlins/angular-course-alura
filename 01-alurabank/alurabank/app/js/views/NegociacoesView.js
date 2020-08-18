@@ -1,10 +1,4 @@
-class NegociacaoView {
-    constructor(selector) {
-        this._elemento = document.querySelector(selector);
-    }
-    update(negociacoes) {
-        this._elemento.innerHTML = this.template(negociacoes);
-    }
+class NegociacaoView extends View {
     template(model) {
         return `
                 ${model.paraArray().map(negociacao => `
